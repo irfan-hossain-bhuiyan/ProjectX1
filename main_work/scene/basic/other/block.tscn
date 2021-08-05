@@ -2,9 +2,6 @@
 
 [ext_resource path="res://asset/Material_003.material" type="Material" id=1]
 
-[sub_resource type="BoxShape" id=1]
-extents = Vector3( 4.83144, 2.34339, 2.23905 )
-
 [sub_resource type="ArrayMesh" id=2]
 resource_name = "blackbar"
 surfaces/0 = {
@@ -20,13 +17,15 @@ surfaces/0 = {
 "vertex_count": 152
 }
 
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 4.83144, 2.34339, 2.23905 )
+
 [node name="blocker_body" type="KinematicBody"]
+
+[node name="blocker" type="MeshInstance" parent="."]
+mesh = SubResource( 2 )
+material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.33802, -0.980504 )
 shape = SubResource( 1 )
-
-[node name="blocker" type="MeshInstance" parent="CollisionShape"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.33802, 0.980504 )
-mesh = SubResource( 2 )
-material/0 = null

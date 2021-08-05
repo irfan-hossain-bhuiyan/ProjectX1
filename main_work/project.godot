@@ -13,6 +13,10 @@ config_version=4
 config/name="Main Work"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://scene/global.tscn"
+
 [physics]
 
 common/enable_pause_aware_picking=true
