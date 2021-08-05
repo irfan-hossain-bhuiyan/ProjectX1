@@ -5,7 +5,7 @@
 [ext_resource path="res://asset/Material_002.material" type="Material" id=3]
 [ext_resource path="res://scene/basic/ball/ball.gd" type="Script" id=4]
 
-[sub_resource type="ArrayMesh" id=2]
+[sub_resource type="ArrayMesh" id=1]
 resource_name = "Cylinder002"
 surfaces/0 = {
 "aabb": AABB( -2.80775, 2.3994, -2.65129, 5.67846, 2, 5.20198 ),
@@ -32,7 +32,7 @@ surfaces/1 = {
 "vertex_count": 559
 }
 
-[sub_resource type="SphereShape" id=1]
+[sub_resource type="SphereShape" id=2]
 radius = 4.52903
 
 [node name="ball_body" type="KinematicBody"]
@@ -40,10 +40,10 @@ script = ExtResource( 4 )
 
 [node name="ball" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
-mesh = SubResource( 2 )
+mesh = SubResource( 1 )
 material/0 = null
 material/1 = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
